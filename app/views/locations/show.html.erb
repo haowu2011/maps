@@ -1,0 +1,13 @@
+<h1>Location #<%= @location.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @location.name %></p>
+</div>
+<div>
+  <strong>Address</strong>:<br />
+  <p><%= @location.address %></p>
+</div>
+
+<a href="/locations/<%= @location.id %>/edit">Edit</a> |
+<a href="/locations/<%= @location.id %>/destroy">Destroy</a>

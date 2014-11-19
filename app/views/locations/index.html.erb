@@ -1,0 +1,29 @@
+<h1>Locations</h1>
+
+<p><a href="/new_location">Add a New Location</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @locations.each do |location| %>
+    <tr>
+          <td><%= location.name %></td>
+          <td><%= location.address %></td>
+          <td><a href="/locations/<%= location.id %>">Show</a>
+        </td>
+      <td><a href="/locations/<%= location.id %>/edit">Edit</a></td>
+      <td><a href="/locations/<%= location.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
